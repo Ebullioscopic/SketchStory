@@ -3,6 +3,9 @@ import SwiftUI
 struct FeaturesPrivacyPolicyView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject private var storage: StorageService
+
+    @State private var showResetAlert = false
 
     var body: some View {
         NavigationView {
@@ -47,12 +50,33 @@ struct FeaturesPrivacyPolicyView: View {
                             .fontWeight(.semibold)
                             .fixedSize(horizontal: false, vertical: true)
                     }
+
+                    Divider()
+
+                    Button(role: .destructive) {
+                        showResetAlert = true
+                    } label: {
+                        Text("Reset All Generated Data")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .tint(.red)
                 }
                 .padding(20)
             }
             .scrollIndicators(.hidden)
             .background(AppPalette.background(for: colorScheme))
             .navigationTitle("Features & Privacy")
+            .alert("Reset all generated data?", isPresented: $showResetAlert) {
+                Button("Delete Everything", role: .destructive) {
+                    storage.clearAllGeneratedData()
+                }
+                Button("Cancel", role: .cancel) { }
+            } message: {
+                Text("This will permanently delete all generated stories and their saved images from this device.")
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {

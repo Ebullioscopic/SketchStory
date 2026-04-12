@@ -128,6 +128,11 @@ class StorageService: ObservableObject {
         }
     }
 
+    func clearAllGeneratedData() {
+        stories = []
+        UserDefaults.standard.removeObject(forKey: storiesKey)
+    }
+
     private func removeLegacyPresetStoriesIfPresent() {
         let presetTitles: Set<String> = [
             "Milo and the Moonlight Library",

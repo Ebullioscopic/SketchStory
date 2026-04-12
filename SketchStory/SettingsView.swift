@@ -150,7 +150,7 @@ struct SettingsView: View {
                 FeaturesPrivacyPolicyView()
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
                         persistSettings()
                         presentationMode.wrappedValue.dismiss()
