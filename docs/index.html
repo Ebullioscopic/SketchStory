@@ -55,6 +55,19 @@
         box-shadow: 0 10px 26px rgba(43, 31, 16, 0.08);
       }
 
+      .nav {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
       h1 {
         margin: 0 0 8px;
         font-size: clamp(1.65rem, 2.2vw, 2.1rem);
@@ -103,6 +116,11 @@
   <body>
     <main class="wrap">
       <article class="card">
+        <nav class="nav" aria-label="Page links">
+          <a href="./index.html">Privacy Policy</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+
         <h1>SketchStory Privacy Policy</h1>
         <p class="muted"><strong>Effective date:</strong> April 12, 2026</p>
 
@@ -169,8 +187,8 @@
         </div>
 
         <footer>
-          Questions about this privacy policy can be submitted through the support contact listed on
-          the SketchStory App Store page.
+          Questions about this privacy policy can be submitted through the
+          <a href="./contact.html">Contact page</a>.
         </footer>
       </article>
     </main>
