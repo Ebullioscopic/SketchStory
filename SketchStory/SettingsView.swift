@@ -15,6 +15,7 @@ struct SettingsView: View {
     @State private var savedProfileLocation: String = ""
     @State private var showProfileSavedFeedback = false
     @State private var showClearProfileConfirmation = false
+    @State private var showFeaturesAndPrivacyPolicy = false
 
     @State private var readingMode: ReadingMode = .scroll
     @State private var enhancedTextSize: Bool = false
@@ -128,10 +129,26 @@ struct SettingsView: View {
                     }
                 }
                 .listRowBackground(AppPalette.card(for: colorScheme))
+
+                Section {
+                    Button {
+                        showFeaturesAndPrivacyPolicy = true
+                    } label: {
+                        Text("Features and Privacy Policy")
+                            .font(.footnote.weight(.semibold))
+                            .foregroundStyle(.blue)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    .buttonStyle(.plain)
+                }
+                .listRowBackground(Color.clear)
             }
             .scrollContentBackground(.hidden)
             .background(AppPalette.background(for: colorScheme))
             .navigationTitle("Settings")
+            .sheet(isPresented: $showFeaturesAndPrivacyPolicy) {
+                FeaturesPrivacyPolicyView()
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Done") {
