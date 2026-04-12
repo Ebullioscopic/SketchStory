@@ -1,4 +1,5 @@
 import SwiftUI
+import SafariServices
 
 struct FeaturesPrivacyPolicyView: View {
     @Environment(\.dismiss) private var dismiss
@@ -6,6 +7,9 @@ struct FeaturesPrivacyPolicyView: View {
     @EnvironmentObject private var storage: StorageService
 
     @State private var showResetAlert = false
+    @State private var showDetailedPrivacyPolicy = false
+
+    private let detailedPolicyURL = URL(string: "https://ebullioscopic.github.io/SketchStory")!
 
     var body: some View {
         NavigationView {
@@ -49,6 +53,19 @@ struct FeaturesPrivacyPolicyView: View {
                         Text("In short: what you create in SketchStory stays with you.")
                             .fontWeight(.semibold)
                             .fixedSize(horizontal: false, vertical: true)
+
+                        Button {
+                            showDetailedPrivacyPolicy = true
+                        } label: {
+                            HStack(spacing: 6) {
+                                Image(systemName: "link")
+                                Text("Read Detailed Privacy Policy")
+                            }
+                            .font(.subheadline.weight(.semibold))
+                            .padding(.top, 4)
+                        }
+                        .buttonStyle(.plain)
+                        .foregroundStyle(.blue)
                     }
 
                     Divider()
@@ -69,6 +86,10 @@ struct FeaturesPrivacyPolicyView: View {
             .scrollIndicators(.hidden)
             .background(AppPalette.background(for: colorScheme))
             .navigationTitle("Features & Privacy")
+            .sheet(isPresented: $showDetailedPrivacyPolicy) {
+                InAppBrowserView(url: detailedPolicyURL)
+                    .ignoresSafeArea()
+            }
             .alert("Reset all generated data?", isPresented: $showResetAlert) {
                 Button("Delete Everything", role: .destructive) {
                     storage.clearAllGeneratedData()
@@ -86,6 +107,18 @@ struct FeaturesPrivacyPolicyView: View {
             }
         }
     }
+}
+
+private struct InAppBrowserView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        let controller = SFSafariViewController(url: url)
+        controller.dismissButtonStyle = .close
+        return controller
+    }
+
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) { }
 }
 
 private struct FeaturePoint: View {
