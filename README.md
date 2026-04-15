@@ -1,14 +1,23 @@
 # SketchStory
 
-SketchStory is a storytelling app that helps parents turn prompts and drawings into kid-friendly stories.
-It uses on-device Apple Intelligence capabilities for text and image understanding while keeping content local to the device.
+<p align="center">
+    <img src=".github/assets/SketchStory_AppStore_logo.png" alt="SketchStory App Logo" width="160" />
+</p>
 
-<img src=".github/assets/SketchStory_AppStore_logo.png" alt="SketchStory App Logo" width="180" />
+<p align="center">
+    SketchStory is a storytelling app that helps parents turn prompts and drawings into kid-friendly stories.<br/>
+    It uses on-device Apple Intelligence capabilities for text and image understanding while keeping content local to the device.
+</p>
 
-[![Download on the App Store](.github/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/in/app/sketchstory/id6762089588)
+<p align="center">
+    <a href="https://apps.apple.com/in/app/sketchstory/id6762089588">
+        <img src=".github/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" height="52" />
+    </a>
+</p>
 
-SketchStory is now published on the Mac App Store:
-https://apps.apple.com/in/app/sketchstory/id6762089588
+<p align="center">
+    App Store listing: <a href="https://apps.apple.com/in/app/sketchstory/id6762089588">SketchStory</a>
+</p>
 
 ## Highlights
 
@@ -34,7 +43,8 @@ https://apps.apple.com/in/app/sketchstory/id6762089588
 
 ## Availability
 
-- Platform: Mac App Store
+- Platforms: iOS, iPadOS, macOS
+- Distribution: App Store
 - Listing: https://apps.apple.com/in/app/sketchstory/id6762089588
 
 ## Privacy and Support
@@ -47,7 +57,7 @@ https://apps.apple.com/in/app/sketchstory/id6762089588
 ### Requirements
 
 - Xcode 16+
-- iOS Simulator or iOS device with supported OS version
+- iOS Simulator, iPadOS Simulator, macOS, or supported Apple device
 
 ### Command Line Build
 
