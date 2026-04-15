@@ -3,7 +3,7 @@
 SketchStory is a storytelling app that helps parents turn prompts and drawings into kid-friendly stories.
 It uses on-device Apple Intelligence capabilities for text and image understanding while keeping content local to the device.
 
-![SketchStory App Logo](.github/assets/SketchStory_AppStore_logo.png)
+<img src=".github/assets/SketchStory_AppStore_logo.png" alt="SketchStory App Logo" width="180" />
 
 [![Download on the App Store](.github/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg)](https://apps.apple.com/in/app/sketchstory/id6762089588)
 
