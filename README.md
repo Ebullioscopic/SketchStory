@@ -1,7 +1,9 @@
 # SketchStory
 
 <p align="center">
-    <img src=".github/assets/SketchStory_AppStore_logo.png" alt="SketchStory App Logo" width="160" />
+    <a href="https://ebullioscopic.github.io/SketchStory/">
+        <img src=".github/assets/SketchStory_AppStore_logo.png" alt="SketchStory App Logo" width="160" />
+    </a>
 </p>
 
 <p align="center">
