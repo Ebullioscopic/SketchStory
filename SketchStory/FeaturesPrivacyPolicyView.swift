@@ -9,7 +9,7 @@ struct FeaturesPrivacyPolicyView: View {
     @State private var showResetAlert = false
     @State private var showDetailedPrivacyPolicy = false
 
-    private let detailedPolicyURL = URL(string: "https://ebullioscopic.github.io/SketchStory")!
+    private let detailedPolicyURL = URL(string: "https://ebullioscopic.github.io/SketchStory/privacy.html")!
 
     var body: some View {
         NavigationView {

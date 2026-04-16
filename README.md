@@ -49,7 +49,7 @@
 
 ## Privacy and Support
 
-- Privacy Policy: https://ebullioscopic.github.io/SketchStory/
+- Privacy Policy: https://ebullioscopic.github.io/SketchStory/privacy.html
 - Contact Page: https://ebullioscopic.github.io/SketchStory/contact.html
 
 ## Build and Run
