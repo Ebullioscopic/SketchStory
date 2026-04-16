@@ -1,171 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SketchStory Contact</title>
-    <meta name="description" content="Contact details for SketchStory" />
-    <style>
-      :root {
-        --bg: #f3ede3;
-        --card: #fffdf8;
-        --text: #1d1d1f;
-        --muted: #6a6a6f;
-        --accent: #0a84ff;
-        --border: #e5dccf;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #1f1b16;
-          --card: #2a241d;
-          --text: #f5f5f7;
-          --muted: #b2aba2;
-          --accent: #4da3ff;
-          --border: #3f372e;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SketchStory - Contact</title>
+  <meta name="description" content="Contact details for SketchStory support and publisher communication.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#D94F3D',
+            'brand-blue': '#6B87A8',
+            'brand-cream': '#F2E8DE'
+          },
+          fontFamily: {
+            heading: ['Nunito', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
         }
       }
+    }
+  </script>
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Nunito', sans-serif; }
+    .thick-border { border: 3px solid #1a1a1a; }
+    .thick-shadow { box-shadow: 6px 6px 0 #1a1a1a; }
+    .bg-dots { background-image: radial-gradient(circle, #1a1a1a 1.5px, transparent 1.5px); background-size: 22px 22px; opacity: 0.07; }
+  </style>
+</head>
+<body class="bg-brand-cream overflow-x-hidden text-gray-900">
+  <nav class="sticky top-0 z-50 bg-brand-cream" style="border-bottom: 3px solid #1a1a1a;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="./assets/SketchStory_AppStore_logo.png" alt="SketchStory" class="w-9 h-9 rounded-xl thick-border">
+        <span class="text-xl font-black">SketchStory</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="./index.html" class="text-sm font-semibold text-gray-700 hover:text-brand">Home</a>
+        <a href="./privacy.html" class="text-sm font-semibold text-gray-700 hover:text-brand">Privacy</a>
+        <a href="./contact.html" class="text-sm font-semibold text-brand">Contact</a>
+        <a href="https://apps.apple.com/in/app/sketchstory/id6762089588" target="_blank" rel="noopener noreferrer" class="bg-brand text-white text-sm font-bold px-5 py-2 rounded-full thick-border thick-shadow">Download</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2" aria-label="Open menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t-2 border-gray-900 bg-brand-cream px-6 py-4 space-y-3">
+      <a href="./index.html" class="block text-sm font-semibold text-gray-700">Home</a>
+      <a href="./privacy.html" class="block text-sm font-semibold text-gray-700">Privacy</a>
+      <a href="./contact.html" class="block text-sm font-semibold text-brand">Contact</a>
+      <a href="https://apps.apple.com/in/app/sketchstory/id6762089588" target="_blank" rel="noopener noreferrer" class="block bg-brand text-white text-sm font-bold px-5 py-2 rounded-full text-center thick-border">Download</a>
+    </div>
+  </nav>
 
-      * {
-        box-sizing: border-box;
-      }
+  <section class="py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-dots pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 relative">
+      <div class="bg-white rounded-3xl thick-border p-8 md:p-10 thick-shadow">
+        <div class="inline-flex items-center gap-2 bg-brand-cream px-4 py-2 rounded-full thick-border mb-5">
+          <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+          <span class="text-xs font-black uppercase tracking-widest text-brand">Contact</span>
+        </div>
 
-      body {
-        margin: 0;
-        font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.65;
-        color: var(--text);
-        background: linear-gradient(180deg, #f7f1e8 0%, var(--bg) 55%);
-      }
+        <h1 class="text-4xl md:text-5xl font-black mb-2">Contact SketchStory</h1>
+        <p class="text-gray-600 mb-8">For support requests and product communication, use the details below.</p>
 
-      .wrap {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 28px 16px 40px;
-      }
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border-2 border-gray-900/15 p-5 bg-brand-cream/40">
+            <h2 class="text-lg font-black mb-3">Primary Contact</h2>
+            <ul class="space-y-3 text-sm">
+              <li><strong>Name:</strong> Hariharan Mudaliar</li>
+              <li><strong>Email:</strong> <a class="text-brand font-semibold" href="mailto:hrhn.mudaliar251@gmail.com">hrhn.mudaliar251@gmail.com</a></li>
+              <li><strong>Phone:</strong> <a class="text-brand font-semibold" href="tel:+919429199029">+91 9429199029</a></li>
+            </ul>
+          </div>
 
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 20px;
-        padding: 26px;
-        box-shadow: 0 10px 26px rgba(43, 31, 16, 0.08);
-      }
+          <div class="rounded-2xl border-2 border-gray-900/15 p-5 bg-brand-cream/40">
+            <h2 class="text-lg font-black mb-3">Project Links</h2>
+            <ul class="space-y-3 text-sm">
+              <li><strong>Website:</strong> <a class="text-brand font-semibold" href="https://tinyurl.com/hariharanmudaliar">tinyurl.com/hariharanmudaliar</a></li>
+              <li><strong>LinkedIn:</strong> <a class="text-brand font-semibold" href="https://linkedin.com/in/hariharan-mudaliar">linkedin.com/in/hariharan-mudaliar</a></li>
+              <li><strong>GitHub:</strong> <a class="text-brand font-semibold" href="https://github.com/Ebullioscopic">github.com/Ebullioscopic</a></li>
+            </ul>
+          </div>
+        </div>
 
-      .nav {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-bottom: 14px;
-      }
+        <div class="mt-8 p-4 rounded-2xl bg-gray-900 text-gray-200 border border-gray-700">
+          <p class="text-sm">Looking for privacy details? Visit the <a href="./privacy.html" class="text-white underline font-semibold">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      .nav a {
-        text-decoration: none;
-        color: var(--accent);
-        font-weight: 600;
-      }
+  <footer class="py-12 bg-gray-950 border-t-2 border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">&copy; <span id="year"></span> Hariharan Mudaliar. All rights reserved.</p>
+      <div class="flex items-center gap-5 text-xs">
+        <a href="./index.html" class="text-gray-400 hover:text-white">Home</a>
+        <a href="./privacy.html" class="text-gray-400 hover:text-white">Privacy</a>
+        <a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-      h1 {
-        margin: 0 0 8px;
-        font-size: clamp(1.65rem, 2.2vw, 2.1rem);
-        line-height: 1.25;
-        letter-spacing: -0.02em;
-      }
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
 
-      h2 {
-        margin: 24px 0 10px;
-        font-size: 1.1rem;
-      }
-
-      p,
-      li {
-        color: var(--text);
-      }
-
-      .muted {
-        color: var(--muted);
-      }
-
-      .contact-list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .contact-list li {
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 12px 14px;
-        margin-bottom: 10px;
-        background: rgba(183, 145, 96, 0.08);
-      }
-
-      .label {
-        display: block;
-        font-size: 0.85rem;
-        letter-spacing: 0.01em;
-        color: var(--muted);
-      }
-
-      a {
-        color: var(--accent);
-      }
-
-      footer {
-        margin-top: 18px;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-    </style>
-  </head>
-  <body>
-    <main class="wrap">
-      <article class="card">
-        <nav class="nav" aria-label="Page links">
-          <a href="./index.html">Home</a>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./contact.html">Contact</a>
-        </nav>
-
-        <h1>SketchStory Contact</h1>
-        <p class="muted">Support and project contact details for SketchStory.</p>
-
-        <h2>Primary Contact</h2>
-        <ul class="contact-list">
-          <li>
-            <span class="label">Name</span>
-            Hariharan Mudaliar
-          </li>
-          <li>
-            <span class="label">Email</span>
-            <a href="mailto:hrhn.mudaliar251@gmail.com">hrhn.mudaliar251@gmail.com</a>
-          </li>
-          <li>
-            <span class="label">Phone</span>
-            <a href="tel:+919429199029">+91 9429199029</a>
-          </li>
-        </ul>
-
-        <h2>Project Links</h2>
-        <ul class="contact-list">
-          <li>
-            <span class="label">Website</span>
-            <a href="https://tinyurl.com/hariharanmudaliar">tinyurl.com/hariharanmudaliar</a>
-          </li>
-          <li>
-            <span class="label">LinkedIn</span>
-            <a href="https://linkedin.com/in/hariharan-mudaliar">linkedin.com/in/hariharan-mudaliar</a>
-          </li>
-          <li>
-            <span class="label">GitHub</span>
-            <a href="https://github.com/Ebullioscopic">github.com/Ebullioscopic</a>
-          </li>
-        </ul>
-
-        <footer>
-          For privacy details, please review the <a href="./privacy.html">Privacy Policy</a>.
-        </footer>
-      </article>
-    </main>
-  </body>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>

@@ -105,16 +105,51 @@
       scroll-snap-align: center;
     }
 
-    .iphone-notch {
+    .iphone-island {
       position: absolute;
-      top: 7px;
+      top: 8px;
       left: 50%;
       transform: translateX(-50%);
       width: 96px;
-      height: 20px;
-      background: #111827;
-      border-radius: 0 0 12px 12px;
+      height: 26px;
+      background: #030712;
+      border-radius: 999px;
       z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+    }
+
+    .iphone-island::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1f2937;
+      box-shadow: inset 0 0 0 1px #374151;
+    }
+
+    .icon-box {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 1rem;
+      border: 3px solid #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .icon-box svg {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .icon-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
 
     .iphone-screen {
@@ -133,18 +168,6 @@
       display: block;
     }
   </style>
-<style>
-.reveal { animation: revealFallback 0s 1s forwards; }
-.reveal.visible { animation: none; }
-@keyframes revealFallback { to { opacity: 1; transform: none; } }
-nav, header { position: relative; z-index: 40; }
-nav button, header button { position: relative; z-index: 9999 !important; cursor: pointer !important; pointer-events: auto !important; }
-#entro-menu-toggle { display: none; }
-#entro-menu-toggle:checked ~ nav #mobile-menu,
-#entro-menu-toggle:checked ~ nav [data-mobile-menu],
-#entro-menu-toggle:checked ~ header #mobile-menu,
-#entro-menu-toggle:checked ~ header [data-mobile-menu] { display: block !important; }
-</style>
 </head>
 <body class="bg-brand-cream overflow-x-hidden">
 
@@ -195,7 +218,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
         <!-- Category badge -->
         <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full thick-border thick-shadow mb-6">
           <span class="text-xs font-black uppercase tracking-widest text-brand">For Kids &amp; Families</span>
-          <span class="text-base">✏️</span>
+          <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
         </div>
 
         <!-- App icon + name row -->
@@ -303,7 +326,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
             <div class="w-14 h-14 bg-brand rounded-2xl thick-border flex items-center justify-center mb-5 thick-shadow">
               <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             </div>
-            <div class="text-xs font-black uppercase tracking-widest text-brand mb-2">01 — Core Magic</div>
+            <div class="text-xs font-black uppercase tracking-widest text-brand mb-2">01 - Core Magic</div>
             <h3 class="text-3xl font-black text-gray-900 mb-4" style="font-family:'Nunito',sans-serif;">Drawings Become Stories</h3>
             <p class="text-base text-gray-600 leading-relaxed">Kids draw anything -- a dragon, a house, a silly face -- and SketchStory's AI understands the sketch, builds characters from it, and creates a completely unique narrative just for them.</p>
             <div class="mt-6 flex flex-wrap gap-2">
@@ -314,14 +337,16 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
           </div>
           <div class="flex-1 bg-brand flex items-center justify-center p-10 min-h-48">
             <div class="text-center">
-              <div class="text-8xl mb-4">✏️</div>
+              <div class="icon-box bg-white">
+                <svg class="text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
               <div class="flex items-center gap-4 justify-center">
                 <div class="w-12 h-12 rounded-xl bg-white thick-border flex items-center justify-center">
-                  <span class="text-2xl">🐉</span>
+                  <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5c0 4.694-3.806 8.5-8.5 8.5S4 15.194 4 10.5 7.806 2 12.5 2c2.056 0 3.94.732 5.405 1.95"/><path d="M15 9.5a2.5 2.5 0 1 1-5 0"/><path d="m20 4-1.5 3L22 8.5 18.5 10 20 13l-3-1.5L14.5 14 13 11l-3-1 3-1.5L13.5 5 15 7z"/></svg>
                 </div>
                 <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 <div class="w-12 h-12 rounded-xl bg-yellow-400 thick-border flex items-center justify-center">
-                  <span class="text-2xl">📖</span>
+                  <svg class="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
                 </div>
               </div>
               <p class="text-white font-black text-sm mt-4">Scribble to Storybook</p>
@@ -337,7 +362,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
             <div class="w-14 h-14 bg-brand-blue rounded-2xl thick-border flex items-center justify-center mb-5 thick-shadow-blue">
               <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
             </div>
-            <div class="text-xs font-black uppercase tracking-widest text-brand-blue mb-2">02 — Bedtime Ready</div>
+            <div class="text-xs font-black uppercase tracking-widest text-brand-blue mb-2">02 - Bedtime Ready</div>
             <h3 class="text-3xl font-black text-gray-900 mb-4" style="font-family:'Nunito',sans-serif;">Stories Read Aloud</h3>
             <p class="text-base text-gray-600 leading-relaxed">Every story can be read aloud in a warm, soothing voice. Perfect for winding down at bedtime -- your child's own creation becomes the bedtime story they actually want to hear.</p>
             <div class="mt-6 flex flex-wrap gap-2">
@@ -348,7 +373,9 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
           </div>
           <div class="flex-1 bg-brand-blue flex items-center justify-center p-10 min-h-48">
             <div class="text-center">
-              <div class="text-8xl mb-4">🌙</div>
+              <div class="icon-box bg-white">
+                <svg class="text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7.5 7.5 0 1 0 9 9A9 9 0 1 1 12 3z"/></svg>
+              </div>
               <div class="bg-white rounded-2xl thick-border p-4 max-w-48">
                 <div class="flex items-center gap-2 mb-2">
                   <div class="w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center">
@@ -372,7 +399,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
             <div class="w-14 h-14 bg-green-400 rounded-2xl thick-border flex items-center justify-center mb-5" style="box-shadow: 6px 6px 0 #22c55e60;">
               <svg class="w-7 h-7 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <div class="text-xs font-black uppercase tracking-widest text-green-400 mb-2">03 — Family Trust</div>
+            <div class="text-xs font-black uppercase tracking-widest text-green-400 mb-2">03 - Family Trust</div>
             <h3 class="text-3xl font-black text-white mb-4" style="font-family:'Nunito',sans-serif;">Built for Privacy</h3>
             <p class="text-base text-gray-300 leading-relaxed">Zero data collected. Zero internet required. Everything runs entirely on your child's device using Apple Intelligence. Parents can feel completely safe knowing their family's creativity stays in the family.</p>
             <div class="mt-6 flex flex-wrap gap-2">
@@ -383,7 +410,9 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
           </div>
           <div class="flex-1 bg-green-400 flex items-center justify-center p-10 min-h-48">
             <div class="text-center">
-              <div class="text-8xl mb-4">🔒</div>
+              <div class="icon-box bg-gray-900">
+                <svg class="text-green-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
               <div class="flex flex-col gap-2 items-center">
                 <div class="bg-gray-900 rounded-xl thick-border px-4 py-2 flex items-center gap-2">
                   <div class="w-2 h-2 bg-green-400 rounded-full"></div>
@@ -410,7 +439,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
             <div class="w-14 h-14 bg-gray-900 rounded-2xl thick-border flex items-center justify-center mb-5" style="box-shadow: 6px 6px 0 rgba(0,0,0,0.3);">
               <svg class="w-7 h-7 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 9.5 9.5 3 12l6.5 2.5L12 21l2.5-6.5L21 12l-6.5-2.5z"/></svg>
             </div>
-            <div class="text-xs font-black uppercase tracking-widest text-gray-700 mb-2">04 — Educational Value</div>
+            <div class="text-xs font-black uppercase tracking-widest text-gray-700 mb-2">04 - Educational Value</div>
             <h3 class="text-3xl font-black text-gray-900 mb-4" style="font-family:'Nunito',sans-serif;">Screen Time That Matters</h3>
             <p class="text-base text-gray-700 leading-relaxed">Instead of passive scrolling, kids become authors and artists. SketchStory encourages creativity, supports early literacy, and turns screen time into a calm, imaginative experience families love.</p>
             <div class="mt-6 flex flex-wrap gap-2">
@@ -421,12 +450,14 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
           </div>
           <div class="flex-1 bg-gray-900 flex items-center justify-center p-10 min-h-48">
             <div class="text-center">
-              <div class="text-8xl mb-4">🎨</div>
+              <div class="icon-box bg-yellow-400">
+                <svg class="text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1-1-1v-2a4 4 0 0 0-4-4H5a3 3 0 0 1 0-6h2a8 8 0 1 1 8 8h-1a2 2 0 0 0-2 2v2a1 1 0 0 1-1 1z"/><circle cx="7.5" cy="10.5" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/><circle cx="17" cy="11" r="1"/></svg>
+              </div>
               <div class="flex gap-3 justify-center">
-                <div class="w-10 h-10 rounded-full bg-red-400 thick-border flex items-center justify-center"><span class="text-lg">📝</span></div>
-                <div class="w-10 h-10 rounded-full bg-yellow-400 thick-border flex items-center justify-center"><span class="text-lg">💡</span></div>
-                <div class="w-10 h-10 rounded-full bg-green-400 thick-border flex items-center justify-center"><span class="text-lg">📚</span></div>
-                <div class="w-10 h-10 rounded-full bg-blue-400 thick-border flex items-center justify-center"><span class="text-lg">⭐</span></div>
+                <div class="w-10 h-10 rounded-full bg-red-400 thick-border flex items-center justify-center"><svg class="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                <div class="w-10 h-10 rounded-full bg-yellow-400 thick-border flex items-center justify-center"><svg class="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.74V17h8v-2.26A7 7 0 0 0 12 2z"/></svg></div>
+                <div class="w-10 h-10 rounded-full bg-green-400 thick-border flex items-center justify-center"><svg class="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+                <div class="w-10 h-10 rounded-full bg-blue-400 thick-border flex items-center justify-center"><svg class="w-5 h-5 text-gray-900" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.7 5.47L21 8.4l-4.5 4.38L17.6 19 12 16.05 6.4 19l1.1-6.22L3 8.4l6.3-.93L12 2z"/></svg></div>
               </div>
               <p class="text-yellow-400 font-black text-sm mt-4">Imagination Unlocked</p>
             </div>
@@ -450,21 +481,21 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
 
       <div class="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide reveal" style="-webkit-overflow-scrolling: touch;">
         <div class="iphone-mock" style="box-shadow: 8px 8px 0 #D94F3D;">
-          <div class="iphone-notch"></div>
+          <div class="iphone-island"></div>
           <div class="iphone-screen">
             <img src="./assets/UploadScreen.png" alt="Create story screen">
           </div>
         </div>
 
         <div class="iphone-mock" style="box-shadow: 8px 8px 0 #6B87A8;">
-          <div class="iphone-notch"></div>
+          <div class="iphone-island"></div>
           <div class="iphone-screen">
             <img src="./assets/StoryScreen.png" alt="Story preview screen">
           </div>
         </div>
 
         <div class="iphone-mock" style="box-shadow: 8px 8px 0 #F59E0B;">
-          <div class="iphone-notch"></div>
+          <div class="iphone-island"></div>
           <div class="iphone-screen">
             <img src="./assets/ListScreen.png" alt="Story library screen">
           </div>
@@ -495,7 +526,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 reveal">
         <div class="bg-brand rounded-3xl thick-border p-8 text-center" style="box-shadow: 6px 6px 0 #B83C2B;">
           <div class="w-16 h-16 bg-white rounded-2xl thick-border flex items-center justify-center mx-auto mb-5">
-            <span class="text-3xl">✏️</span>
+            <svg class="w-8 h-8 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
           <div class="text-5xl font-black text-white/20 mb-2" style="font-family:'Nunito',sans-serif;">01</div>
           <h3 class="text-xl font-black text-white mb-3" style="font-family:'Nunito',sans-serif;">Draw Something</h3>
@@ -503,7 +534,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
         </div>
         <div class="bg-yellow-400 rounded-3xl thick-border p-8 text-center" style="box-shadow: 6px 6px 0 #d97706;">
           <div class="w-16 h-16 bg-gray-900 rounded-2xl thick-border flex items-center justify-center mx-auto mb-5">
-            <span class="text-3xl">⚡</span>
+            <svg class="w-8 h-8 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
           </div>
           <div class="text-5xl font-black text-gray-900/20 mb-2" style="font-family:'Nunito',sans-serif;">02</div>
           <h3 class="text-xl font-black text-gray-900 mb-3" style="font-family:'Nunito',sans-serif;">AI Creates the Story</h3>
@@ -511,7 +542,7 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
         </div>
         <div class="bg-brand-blue rounded-3xl thick-border p-8 text-center" style="box-shadow: 6px 6px 0 #4a6b88;">
           <div class="w-16 h-16 bg-white rounded-2xl thick-border flex items-center justify-center mx-auto mb-5">
-            <span class="text-3xl">📖</span>
+            <svg class="w-8 h-8 text-brand-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </div>
           <div class="text-5xl font-black text-white/20 mb-2" style="font-family:'Nunito',sans-serif;">03</div>
           <h3 class="text-xl font-black text-white mb-3" style="font-family:'Nunito',sans-serif;">Read &amp; Listen</h3>
@@ -548,11 +579,11 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
 
       <!-- Feature chips -->
       <div class="flex flex-wrap items-center justify-center gap-3 mt-10">
-        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full">✏️ Draw anything</span>
-        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full">📖 Instant stories</span>
-        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full">🔒 100% private</span>
-        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full">🌙 Bedtime ready</span>
-        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full">🎨 Apple Intelligence</span>
+        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full icon-chip"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Draw anything</span>
+        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full icon-chip"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>Instant stories</span>
+        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full icon-chip"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>100% private</span>
+        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full icon-chip"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a7.5 7.5 0 1 0 9 9A9 9 0 1 1 12 3z"/></svg>Bedtime ready</span>
+        <span class="bg-white/15 border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full icon-chip"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a1 1 0 0 1-1-1v-2a4 4 0 0 0-4-4H5a3 3 0 0 1 0-6h2a8 8 0 1 1 8 8h-1a2 2 0 0 0-2 2v2a1 1 0 0 1-1 1z"/></svg>Apple Intelligence</span>
       </div>
     </div>
   </section>
@@ -638,6 +669,5 @@ nav button, header button { position: relative; z-index: 9999 !important; cursor
       el.textContent = new Date().getFullYear();
     });
   </script>
-<script>document.addEventListener('click',function(e){var b=e.target.closest('nav button,header button,[id*="menu"]button');if(!b)return;e.preventDefault();e.stopPropagation();var nav=b.closest('nav')||b.closest('header');if(!nav)return;var menus=nav.querySelectorAll('[id*="mobile"],[id*="menu"],div.hidden,div.md\\:hidden,ul.hidden,ul.md\\:hidden');if(menus.length===0){var ds=nav.querySelectorAll('div,ul');for(var i=0;i<ds.length;i++){var c=ds[i].className||'';if(ds[i].querySelectorAll('a').length>=2&&c.includes('hidden')){menus=[ds[i]];break;}}}menus.forEach(function(m){if(m.querySelectorAll('a').length>=2){m.classList.toggle('hidden');if(m.style.display==='none')m.style.display='block';}});});</script>
 </body>
 </html>

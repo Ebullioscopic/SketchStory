@@ -1,197 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SketchStory Privacy Policy</title>
-    <meta
-      name="description"
-      content="Privacy Policy for SketchStory"
-    />
-    <style>
-      :root {
-        --bg: #f3ede3;
-        --card: #fffdf8;
-        --text: #1d1d1f;
-        --muted: #6a6a6f;
-        --accent: #0a84ff;
-        --border: #e5dccf;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #1f1b16;
-          --card: #2a241d;
-          --text: #f5f5f7;
-          --muted: #b2aba2;
-          --accent: #4da3ff;
-          --border: #3f372e;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SketchStory - Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for SketchStory.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#D94F3D',
+            'brand-blue': '#6B87A8',
+            'brand-cream': '#F2E8DE'
+          },
+          fontFamily: {
+            heading: ['Nunito', 'sans-serif'],
+            body: ['Poppins', 'sans-serif']
+          }
         }
       }
+    }
+  </script>
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-family: 'Nunito', sans-serif; }
+    .thick-border { border: 3px solid #1a1a1a; }
+    .thick-shadow { box-shadow: 6px 6px 0 #1a1a1a; }
+    .bg-dots { background-image: radial-gradient(circle, #1a1a1a 1.5px, transparent 1.5px); background-size: 22px 22px; opacity: 0.07; }
+  </style>
+</head>
+<body class="bg-brand-cream overflow-x-hidden text-gray-900">
+  <nav class="sticky top-0 z-50 bg-brand-cream" style="border-bottom: 3px solid #1a1a1a;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="./index.html" class="flex items-center gap-3">
+        <img src="./assets/SketchStory_AppStore_logo.png" alt="SketchStory" class="w-9 h-9 rounded-xl thick-border">
+        <span class="text-xl font-black">SketchStory</span>
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="./index.html" class="text-sm font-semibold text-gray-700 hover:text-brand">Home</a>
+        <a href="./privacy.html" class="text-sm font-semibold text-brand">Privacy</a>
+        <a href="./contact.html" class="text-sm font-semibold text-gray-700 hover:text-brand">Contact</a>
+        <a href="https://apps.apple.com/in/app/sketchstory/id6762089588" target="_blank" rel="noopener noreferrer" class="bg-brand text-white text-sm font-bold px-5 py-2 rounded-full thick-border thick-shadow">Download</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden p-2" aria-label="Open menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t-2 border-gray-900 bg-brand-cream px-6 py-4 space-y-3">
+      <a href="./index.html" class="block text-sm font-semibold text-gray-700">Home</a>
+      <a href="./privacy.html" class="block text-sm font-semibold text-brand">Privacy</a>
+      <a href="./contact.html" class="block text-sm font-semibold text-gray-700">Contact</a>
+      <a href="https://apps.apple.com/in/app/sketchstory/id6762089588" target="_blank" rel="noopener noreferrer" class="block bg-brand text-white text-sm font-bold px-5 py-2 rounded-full text-center thick-border">Download</a>
+    </div>
+  </nav>
 
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        font-family: "SF Pro Text", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.65;
-        color: var(--text);
-        background: linear-gradient(180deg, #f7f1e8 0%, var(--bg) 55%);
-      }
-
-      .wrap {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 28px 16px 40px;
-      }
-
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 20px;
-        padding: 26px;
-        box-shadow: 0 10px 26px rgba(43, 31, 16, 0.08);
-      }
-
-      .nav {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-bottom: 14px;
-      }
-
-      .nav a {
-        text-decoration: none;
-        color: var(--accent);
-        font-weight: 600;
-      }
-
-      h1 {
-        margin: 0 0 8px;
-        font-size: clamp(1.65rem, 2.2vw, 2.1rem);
-        line-height: 1.25;
-        letter-spacing: -0.02em;
-      }
-
-      h2 {
-        margin: 24px 0 10px;
-        font-size: 1.1rem;
-      }
-
-      p,
-      li {
-        color: var(--text);
-      }
-
-      .muted {
-        color: var(--muted);
-      }
-
-      ul {
-        margin: 8px 0 0;
-        padding-left: 20px;
-      }
-
-      .note {
-        margin-top: 14px;
-        padding: 12px 14px;
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        background: rgba(183, 145, 96, 0.14);
-      }
-
-      a {
-        color: var(--accent);
-      }
-
-      footer {
-        margin-top: 18px;
-        font-size: 0.95rem;
-        color: var(--muted);
-      }
-    </style>
-  </head>
-  <body>
-    <main class="wrap">
-      <article class="card">
-        <nav class="nav" aria-label="Page links">
-          <a href="./index.html">Home</a>
-          <a href="./privacy.html">Privacy Policy</a>
-          <a href="./contact.html">Contact</a>
-        </nav>
-
-        <h1>SketchStory Privacy Policy</h1>
-        <p class="muted"><strong>Effective date:</strong> April 12, 2026</p>
-
-        <p>
-          SketchStory is designed for families and children. Privacy is a core part of the app.
-          This policy explains what information SketchStory uses and how it is handled.
-        </p>
-
-        <h2>1. Data Collection</h2>
-        <p>
-          SketchStory does not collect personal data. We do not create user accounts, do not track
-          users, and do not send your stories, prompts, or images to our servers.
-        </p>
-
-        <h2>2. Offline by Design</h2>
-        <p>
-          SketchStory is built to work offline. Story generation and image understanding features are
-          intended to run on-device using Apple Intelligence capabilities.
-        </p>
-
-        <h2>3. Images and Stories</h2>
-        <p>
-          If you choose to use drawings or images, they are stored locally on your device as part of
-          your story data. You can delete generated content at any time from the app settings.
-        </p>
-
-        <h2>4. Permissions</h2>
-        <p>SketchStory may request access to:</p>
-        <ul>
-          <li>Camera: to capture drawings or images for story inspiration.</li>
-          <li>Photos: to select existing drawings or images from your photo library.</li>
-        </ul>
-        <p>
-          These permissions are only used for the features you choose to use and are not used for
-          tracking.
-        </p>
-
-        <h2>5. Third-Party Services</h2>
-        <p>
-          SketchStory does not use third-party analytics, ad tracking, or remote profiling services
-          for your personal content.
-        </p>
-
-        <h2>6. Children and Family Use</h2>
-        <p>
-          SketchStory is intended for parents and guardians to create stories for children. We do not
-          knowingly collect personal information from children.
-        </p>
-
-        <h2>7. Data Control</h2>
-        <p>
-          You remain in control of your generated content on your device. You can remove stories and
-          images from within the app using the reset/delete options.
-        </p>
-
-        <h2>8. Policy Updates</h2>
-        <p>
-          If this policy changes, the updated version will be posted on this page with a revised
-          effective date.
-        </p>
-
-        <div class="note">
-          In short: what you create in SketchStory stays with you.
+  <section class="py-16 md:py-20 relative overflow-hidden">
+    <div class="absolute inset-0 bg-dots pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 relative">
+      <div class="bg-white rounded-3xl thick-border p-8 md:p-10 thick-shadow">
+        <div class="inline-flex items-center gap-2 bg-brand-cream px-4 py-2 rounded-full thick-border mb-5">
+          <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span class="text-xs font-black uppercase tracking-widest text-brand">Privacy Policy</span>
         </div>
 
-        <footer>
-          Questions about this privacy policy can be submitted through the
-          <a href="./contact.html">Contact page</a>.
-        </footer>
-      </article>
-    </main>
-  </body>
+        <h1 class="text-4xl md:text-5xl font-black mb-2">SketchStory Privacy Policy</h1>
+        <p class="text-sm text-gray-500 mb-8">Effective date: April 12, 2026</p>
+
+        <div class="space-y-7 text-gray-700 leading-relaxed">
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">1. Data Collection</h2>
+            <p>SketchStory does not collect personal data. The app does not create user accounts, does not track users, and does not upload stories, prompts, or images to external servers.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">2. Offline by Design</h2>
+            <p>SketchStory is designed to run offline with on-device intelligence features. Content generation and story workflows are intended to stay local to your device.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">3. Images and Stories</h2>
+            <p>If you use drawings or photos, those files are stored locally as part of your generated stories. You can remove generated content from within the app at any time.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">4. Permissions</h2>
+            <ul class="list-disc pl-6 space-y-1">
+              <li>Camera: capture drawings or images for story inspiration.</li>
+              <li>Photos: select existing drawings or images from your library.</li>
+            </ul>
+            <p class="mt-2">These permissions are used only for features you explicitly choose.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">5. Third-Party Services</h2>
+            <p>SketchStory does not use third-party ad tracking or remote profiling for personal content.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">6. Children and Family Use</h2>
+            <p>SketchStory is built for families. The app is intended for parents and guardians creating stories with or for children.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">7. Data Control</h2>
+            <p>You control your generated data on-device, including options to delete stories and images.</p>
+          </section>
+
+          <section>
+            <h2 class="text-xl font-black text-gray-900 mb-2">8. Policy Updates</h2>
+            <p>If this policy changes, this page will be updated with a revised effective date.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-gray-950 border-t-2 border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-gray-500">&copy; <span id="year"></span> Hariharan Mudaliar. All rights reserved.</p>
+      <div class="flex items-center gap-5 text-xs">
+        <a href="./index.html" class="text-gray-400 hover:text-white">Home</a>
+        <a href="./privacy.html" class="text-gray-400 hover:text-white">Privacy</a>
+        <a href="./contact.html" class="text-gray-400 hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
